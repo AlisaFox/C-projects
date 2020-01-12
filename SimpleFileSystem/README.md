@@ -24,7 +24,8 @@ single indirect pointers, no double / triple ones. The root-directory is pointed
 
 ### The main `sfs_api.c` functions:
 
-`void mksfs(int fresh);   // creates the file system 
+```
+void mksfs(int fresh);   // creates the file system 
 int sfs_getnextfilename(char *fname);  // get the name of the next file in directory 
 int sfs_getfilesize(const char* path); // get the size of the given file 
 int sfs_fopen(char *name);   // opens the given file 
@@ -33,9 +34,10 @@ int sfs_frseek(int fileID,  int loc);   // seek (Read) to the location from begi
 int sfs_fwseek(int fileID,  int loc);   // seek (Write) to the location from beginning 
 int sfs_fwrite(int fileID,   char *buf, int length);  // write buf characters into disk 
 int sfs_fread(int fileID,  char *buf, int length);  // read characters from disk into buf 
-int sfs_remove(char *file);  // removes a file from the filesystem `
+int sfs_remove(char *file);  // removes a file from the filesystem 
+```
 
-See the comments int he actual file for more detailed documentation.
+See the comments in the actual file for more detailed documentation.
 
 ## To-do
 - Make the sfs mountable via FUSE (File Systems in User Space)
