@@ -29,10 +29,6 @@ while (1) {
   - `limit` sets the upper limit for the allowed resource usage
     - used RLIMIT_AS: the maximum size of the process's virtual memory (address space) in bytes
     
- The last part is signal handling. Normally a program shuts off when you hit CTRL-C. That feature is turned off. Instead we ask user
- confirmation of shut down. CTRL-Z is just ignored. 
- 
- 
  There are also a bunch of restrictions:
 - Cursor based movements are not supported
   - ex. after you typed in a command, you can't click in the middle of it and delete those middle characters
@@ -40,6 +36,12 @@ while (1) {
   - ex. `ls | wc` works but `cd \ | ls | wc` wouldn't
   - instead of using an anonymous pipe we use a FIFO
     - the FIFO is passed as an arg to the shell when we initialize it
-  
+    
+   The last part is signal handling. Normally a program shuts off when you hit CTRL-C. That feature is turned off. Instead we ask user
+ confirmation of shut down. CTRL-Z is just ignored. 
+ 
+ ## To-Do
+ Deal with the restrictions! Also when I try to pass in a list of commands in a text file using `< commands.txt`, the shell doesn't
+ terminate. So I've got to debug the problem, maybe it doesn't see the EOF?
 
  
