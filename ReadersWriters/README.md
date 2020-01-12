@@ -12,8 +12,7 @@ the average completion times.
 The first solution, is what is considered to be "the first readers writers problem". All the readers had to finish before the writers could go. 
 Readers could occupy the critical section concurrently. It gives the readers priority. 
 Here are the times for 60 readers and 30 writers :
-> Reader average time is 0.000001 secs,    
->  max time is 0.000064 secs, 
+> Reader average time is 0.000001 secs,  max time is 0.000064 secs, 
 >  min time is 0.000000 secs 
  
 > Writer average time is 0.003930 secs, 
