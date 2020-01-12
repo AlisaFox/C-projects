@@ -12,13 +12,13 @@ the average completion times.
 The first solution, is what is considered to be "the first readers writers problem". All the readers had to finish before the writers could go. 
 Readers could occupy the critical section concurrently. It gives the readers priority. 
 Here are the times for 60 readers and 30 writers :
-> Reader average time is 0.000001 secs 
-> Reader max time is 0.000064 secs 
-> Reader min time is 0.000000 secs 
+> Reader average time is 0.000001 secs,    
+>  max time is 0.000064 secs, 
+>  min time is 0.000000 secs 
  
-> Writer average time is 0.003930 secs 
-> Writer max time is 11.899890 secs 
-> Writer min time is 0.000000 secs 
+> Writer average time is 0.003930 secs, 
+>  max time is 11.899890 secs,
+>  min time is 0.000000 secs 
 
 In the second solution: I tried "the third readers writers problem". I do not think that it technically worked out, as the writers have
 priority. The logic was: 
@@ -26,13 +26,13 @@ priority. The logic was:
 - New readers arriving in the meantime will have to wait.
 
 The times I got were 
->  Reader average time is 0.110264 secs 
->  Reader max time is 2.526340 secs 
->  Reader min time is 0.000000 secs 
+>  Reader average time is 0.110264 secs, 
+>   max time is 2.526340 secs, 
+>   min time is 0.000000 secs 
  
-> Writer average time is 0.003983 secs 
-> Writer max time is 2.017298 secs 
-> Writer min time is 0.000000 secs 
+> Writer average time is 0.003983 secs, 
+>  max time is 2.017298 secs, 
+>  min time is 0.000000 secs 
 
 So things are a bit more fair, but still there is starvation evident in the readers. The biggest differences were the maximum times.
 
