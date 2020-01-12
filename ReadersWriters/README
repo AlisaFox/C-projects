@@ -1,1 +1,0 @@
-Tried to solve the famous readers writers problem. Two attempts: the first starved writers, while the second one was a bit more fair but starved readers
