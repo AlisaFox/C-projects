@@ -25,7 +25,7 @@ priority. The logic was:
 - If a writer arrives while readers are accessing the resource, it will wait until those readers free the resource, and then modify it.  
 - New readers arriving in the meantime will have to wait.
 
-The times I got were 
+The times I got were: 
 >  Reader average time is 0.110264 secs, 
 >   max time is 2.526340 secs, 
 >   min time is 0.000000 secs 
