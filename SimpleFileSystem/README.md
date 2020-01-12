@@ -22,6 +22,8 @@ When the sfs is to be run, I also add a file descriptor table. Basically, each f
 nowhere near as complicated as they are in reality, for example we only have
 single indirect pointers, no double / triple ones. The root-directory is pointed to by the superblock which is pointed to by the first i-Node.  
 
+Then we use these memory structures to make files. We can edit them by writing to / reading from them by using a buffer. There are read and write pointers associated with each file to make things easier. Some tricky parts were involved in the read and write functions as often files were bigger than individual data blocks.
+
 ### The main `sfs_api.c` functions:
 
 ```
@@ -43,3 +45,5 @@ See the comments in the actual file for more detailed documentation.
 - Make the sfs mountable via FUSE (File Systems in User Space)
   - as right now it can be only accessed directly
   - the FUSE Kernel module is provided by the Linux OS
+    - match each FUSE operation with the commands I created
+    - useful [site](http://www.maastaar.net/fuse/linux/filesystem/c/2016/05/21/writing-a-simple-filesystem-using-fuse/)
