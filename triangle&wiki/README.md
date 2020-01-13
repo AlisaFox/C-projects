@@ -9,7 +9,7 @@ links from it.
 
 ## What is happening right now?
 
-For the triangle I finished the first part of the assignment, but I could not draw the Sierpinski triangle. (At this point I probably could).
+For the triangle / rhombus / diamond thingy I finished the first part of it, but I could not draw the Sierpinski triangle. (At this point I probably could).
 
 The second part is complete.
 The task was to extract all links to wikipidea with a title from a text file with a bunch of html formatted
