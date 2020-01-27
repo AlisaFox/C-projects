@@ -2,7 +2,7 @@
 
 ## What:
 First project of the year: I made a shell stimulator. It is a minimalistic one - thus the name tiny. 
-This assignmnet was mostly used to learn about forks.
+This assignment was mostly used to learn about forks.
 
 ## What's happening?
 
@@ -17,7 +17,7 @@ while (1) {
   }
   ```
   
- These are the two main functions: `get_a_line()` is pretty self explanitory and `my_system(line)` takes a line and tries to execute it.
+ These are the two main functions: `get_a_line()` which is pretty self explanitory and `my_system(line)` which takes a line and tries to execute it.
  It is a function that spawns (i.e., creates) a child process and runs the command you passed as the argument to the call,
  assuming the command you requested to run is
  a valid one and is present in the machine. For example, if you specify `/bin/ls` it is going to execute the directory lister command.
@@ -32,7 +32,7 @@ while (1) {
  There are also a bunch of restrictions:
 - Cursor based movements are not supported
   - ex. after you typed in a command, you can't click in the middle of it and delete those middle characters
-- we can have only pipe two commands
+- we can only pipe two commands
   - ex. `ls | wc` works but `cd \ | ls | wc` wouldn't
   - instead of using an anonymous pipe we use a FIFO
     - the FIFO is passed as an arg to the shell when we initialize it
